@@ -1,0 +1,149 @@
+/*FONTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand:wght@600&display=swap');
+
+/*Variables*/
+
+$my-font: 'Quicksand',
+sans-serif;
+$title-font: 'Abril Fatface',
+cursive;
+$my-variable: 42px;
+$title-center: center;
+$break-small: 640px;
+$text-style: 'main-text';
+
+/*COLORS*/
+
+$main-background-color: #BCA4B2;
+$background-low: #dfc5d4;
+$background-higd: #A24F91;
+$input-color: white;
+$headlines-color: white;
+$text-color: #000000;
+$color-medium: #171e31;
+$color-low: #022C67;
+$color-too-low: #003F8D;
+$text-color-magic: $background-higd;
+
+/*MIXIN VARIABLES*/
+
+
+/*Pading*/
+
+@mixin pading-for-container {
+    padding: 2%;
+    width: 95%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+@mixin container {
+    box-shadow: 0 0 1rem 0 $background-higd;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+}
+
+@mixin container-before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px $main-background-color;
+    filter: blur(10px);
+    margin: -20px;
+}
+
+@mixin container-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+@mixin image-background {
+    background: linear-gradient(to right, rgb(240, 198, 227, .6), rgb(240, 198, 227, .6)), url("https://images.unsplash.com/photo-1674677774501-638cc4010c1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+@mixin image-background2 {
+    background: linear-gradient(to right, rgba(31, 16, 119, 0.6), rgba(31, 16, 119, 0.6)), url("https://images.unsplash.com/photo-1674677774501-638cc4010c1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+}
+
+@mixin image-background3 {
+    background: linear-gradient(to right, rgba(7, 2, 32, 0.6), rgba(7, 2, 32, 0.6)), url("https://images.unsplash.com/photo-1674677774501-638cc4010c1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+}
+
+@mixin image-background4 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1674677774501-638cc4010c1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+}
+
+@mixin image-background5 {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1554050857-c84a8abdb5e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1527&q=80");
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: white;
+    padding: 3%;
+}
+
+@mixin background-fotter {
+    background: rgb(35, 18, 99);
+    height: 15%;
+    margin-bottom: 100px;
+    grid-column: 1/13;
+    grid-row: 5/6;
+}
+
+@mixin text-paragraph {
+    font-family: $my-font;
+    font-size: 2em;
+    padding-bottom: 4%;
+}
+
+@mixin text-paragraph2 {
+    font-family: $my-font;
+    font-size: 1.5em;
+    padding-bottom: 4%;
+}
+
+@mixin text-title {
+    font-family: $title-font;
+    font-size: 4em;
+    letter-spacing: 0.15em;
+    word-spacing: 0.15em;
+    width: 90%;
+}
+
+@mixin text-title2 {
+    font-family: $title-font;
+    font-size: 2em;
+    letter-spacing: 0.10em;
+    word-spacing: 0.10em;
+    width: 90%;
+}
+
+@mixin footer {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
