@@ -8,6 +8,9 @@
     grid-row: 1/2;
 }
 
+
+/* ---------------------MAIN-----------------------*/
+
 .main {
     grid-column: 4/11;
     grid-row: 1/2;
@@ -64,6 +67,16 @@
     grid-row: 4/5;
 }
 
+
+/* ---------------------ANIMATIONS-------------------*/
+
+.main {
+    @include animation-of-title;
+}
+
+
+/* ---------------------FOOTER-----------------------*/
+
 footer {
     @include pading-for-container;
     @include background-fotter;
@@ -81,49 +94,38 @@ footer a:hover {
     color: $text-color;
 }
 
+
+/*------------------------NAV BAR---------------------*/
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 5%;
+    @include image-background;
+}
+
+ul,
+.zen-resources {
+    padding: 10%;
+}
+
+aside {
+    @include aside;
+    nav {
+        @include style-none;
+    }
+    .zen-resources {
+        @include style-none;
+    }
+    h3 {
+        @include text-title2;
+    }
+}
+
+
+/* -----------------------SMALL VIEW----------------- */
+
 @media (max-width:650px) {
-    .main h3 {
-        @include text-title2
-    }
-    .main p {
-        @include text-paragraph2;
-    }
-    .main .explanation {
-        grid-column: 4/12;
-        grid-row: 1/2;
-    }
-    .main .participation {
-        grid-column: 4/12;
-        grid-row: 2/3;
-    }
-    .main .benefits {
-        grid-column: 4/12;
-        grid-row: 3/4;
-    }
-    .main .requirements {
-        grid-column: 4/12;
-        grid-row: 4/5;
-    }
-    .main footer {
-        grid-column: 1/4;
-        grid-row: 1/5;
-        height: 90%;
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    .intro {
-        grid-column: 5/13;
-        grid-row: 1/2;
-    }
-    .main {
-        grid-column: 1/13;
-        grid-row: 2/3;
-    }
-    .sidebar {
-        @include image-background5;
-        grid-column: 1/13;
-        grid-row: 3/4;
-    }
+    @include small-main;
 }
