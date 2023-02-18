@@ -77,28 +77,28 @@ $text-color-magic: $background-higd;
     background: linear-gradient(to right, rgba(31, 16, 119, 0.6), rgba(31, 16, 119, 0.6)), url("https://images.unsplash.com/photo-1674677774501-638cc4010c1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
     box-sizing: border-box;
     border-radius: 5px;
-    color: white;
+    color: $input-color;
 }
 
 @mixin image-background3 {
     background: linear-gradient(to right, rgba(7, 2, 32, 0.6), rgba(7, 2, 32, 0.6)), url("https://images.unsplash.com/photo-1674677774501-638cc4010c1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
     box-sizing: border-box;
     border-radius: 5px;
-    color: white;
+    color: $input-color;
 }
 
 @mixin image-background4 {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1674677774501-638cc4010c1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
     box-sizing: border-box;
     border-radius: 5px;
-    color: white;
+    color: $input-color;
 }
 
 @mixin image-background5 {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1554050857-c84a8abdb5e2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1527&q=80");
     box-sizing: border-box;
     border-radius: 5px;
-    color: white;
+    color: $input-color;
     padding: 3%;
 }
 
@@ -136,14 +136,130 @@ $text-color-magic: $background-higd;
     letter-spacing: 0.10em;
     word-spacing: 0.10em;
     width: 90%;
+    color: $text-color;
 }
 
 @mixin footer {
     text-align: center;
     text-decoration: none;
-    color: white;
+    color: $input-color;
     margin-left: 10px;
     margin-right: 10px;
     padding: 10px 20px;
     border-radius: 10px;
+}
+
+@mixin decoration-none {
+    display: block;
+    color: $input-color;
+    text-decoration: none;
+}
+
+
+/* --------ASIDE------- */
+
+@mixin aside {
+    li {
+        width: 90%;
+        text-align: center;
+        margin: 5%;
+        padding: 5%;
+        background-color: $background-higd;
+        border-radius: 5%;
+    }
+}
+
+@mixin style-none {
+    padding: 5%;
+    list-style: none;
+    overflow: hidden;
+    ul,
+    li,
+    a {
+        display: block;
+        padding: 2%;
+        color: $input-color;
+        text-decoration: none;
+        font-size: 1.1em;
+    }
+    li:hover {
+        background: $color-too-low;
+        color: $input-color;
+        font-weight: 700;
+    }
+    a:hover {
+        background: $background-low;
+        color: $text-color-magic;
+        font-weight: 700;
+    }
+}
+
+
+/* --------SMALL VIEW--------*/
+
+@mixin small-main {
+    .main h3 {
+        @include text-title2
+    }
+    .main p {
+        @include text-paragraph2;
+    }
+    .main .explanation {
+        grid-column: 4/12;
+        grid-row: 1/2;
+    }
+    .main .participation {
+        grid-column: 4/12;
+        grid-row: 2/3;
+    }
+    .main .benefits {
+        grid-column: 4/12;
+        grid-row: 3/4;
+    }
+    .main .requirements {
+        grid-column: 4/12;
+        grid-row: 4/5;
+    }
+    .main footer {
+        grid-column: 1/4;
+        grid-row: 1/5;
+        height: 90%;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .intro {
+        grid-column: 5/13;
+        grid-row: 1/2;
+    }
+    .main {
+        grid-column: 1/13;
+        grid-row: 2/3;
+    }
+    .sidebar {
+        @include image-background5;
+        grid-column: 1/13;
+        grid-row: 3/4;
+    }
+}
+
+
+/* -----------Animations ---------*/
+
+@mixin animation-of-title {
+    h3 {
+        animation-duration: 3s;
+        animation-name: slidein;
+    }
+    @keyframes slidein {
+        from {
+            margin-left: 100%;
+            width: 300%
+        }
+        to {
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
 }

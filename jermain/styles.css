@@ -5,6 +5,9 @@
 /*COLORS*/
 /*MIXIN VARIABLES*/
 /*Pading*/
+/* --------ASIDE------- */
+/* --------SMALL VIEW--------*/
+/* -----------Animations ---------*/
 .page-wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -15,6 +18,7 @@
   grid-row: 1/2;
 }
 
+/* ---------------------MAIN-----------------------*/
 .main {
   grid-column: 4/11;
   grid-row: 1/2;
@@ -123,6 +127,23 @@
   grid-row: 4/5;
 }
 
+/* ---------------------ANIMATIONS-------------------*/
+.main h3 {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/* ---------------------FOOTER-----------------------*/
 footer {
   padding: 2%;
   width: 95%;
@@ -153,6 +174,88 @@ footer a:hover {
   color: #000000;
 }
 
+/*------------------------NAV BAR---------------------*/
+.wrapper {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  padding: 5%;
+  background: linear-gradient(to right, rgba(240, 198, 227, 0.6), rgba(240, 198, 227, 0.6)), url("https://images.unsplash.com/photo-1674677774501-638cc4010c1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80");
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+ul,
+.zen-resources {
+  padding: 10%;
+}
+
+aside li {
+  width: 90%;
+  text-align: center;
+  margin: 5%;
+  padding: 5%;
+  background-color: #A24F91;
+  border-radius: 5%;
+}
+aside nav {
+  padding: 5%;
+  list-style: none;
+  overflow: hidden;
+}
+aside nav ul,
+aside nav li,
+aside nav a {
+  display: block;
+  padding: 2%;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+aside nav li:hover {
+  background: #003F8D;
+  color: white;
+  font-weight: 700;
+}
+aside nav a:hover {
+  background: #dfc5d4;
+  color: #A24F91;
+  font-weight: 700;
+}
+aside .zen-resources {
+  padding: 5%;
+  list-style: none;
+  overflow: hidden;
+}
+aside .zen-resources ul,
+aside .zen-resources li,
+aside .zen-resources a {
+  display: block;
+  padding: 2%;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+aside .zen-resources li:hover {
+  background: #003F8D;
+  color: white;
+  font-weight: 700;
+}
+aside .zen-resources a:hover {
+  background: #dfc5d4;
+  color: #A24F91;
+  font-weight: 700;
+}
+aside h3 {
+  font-family: "Abril Fatface", cursive;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  word-spacing: 0.1em;
+  width: 90%;
+  color: #000000;
+}
+
+/* -----------------------SMALL VIEW----------------- */
 @media (max-width: 650px) {
   .main h3 {
     font-family: "Abril Fatface", cursive;
@@ -160,6 +263,7 @@ footer a:hover {
     letter-spacing: 0.1em;
     word-spacing: 0.1em;
     width: 90%;
+    color: #000000;
   }
 
   .main p {
