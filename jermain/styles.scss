@@ -138,8 +138,8 @@ aside {
 
 .extra1 {
     @include extra-square;
-    grid-column: 1/4;
-    grid-row: 2/3;
+    grid-column: 1/7;
+    grid-row: 1/4;
 }
 
 .extra2 {

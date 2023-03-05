@@ -9,14 +9,25 @@
 /* --------SMALL VIEW--------*/
 /* -----------Animations ---------*/
 /* extra1*/
-@keyframes animacuadrado {
-  from {
-    left: 0px;
-  }
-  to {
-    left: 200px;
-  }
+.extra1 {
+  transform: translateX(-100%);
 }
+
+.extra1:hover {
+  transform: translateX(-30%);
+}
+
+div.extra1::after {
+  text-align: right;
+  font-size: 2em;
+  font-family: "Abril Fatface", cursive;
+  padding-left: 40%;
+  content: "The Beauty of CSS Design";
+}
+
+/* input[type=checkbox]:checked ~ div.curtain__panel--left {
+    transform: translateX(0);
+  } */
 /*extra2*/
 @keyframes animacuadrado2 {
   0% {
@@ -74,10 +85,10 @@
 /* extra4*/
 @keyframes bounce {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(100px, 0, 0);
   }
   to {
-    transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 200px);
   }
 }
 /*extra5*/
@@ -374,14 +385,25 @@ aside h3 {
 
 /*ANIMATIONs*/
 .extra1 {
-  width: 200px;
-  height: 200px;
-  background: #A24F91;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1677694035949-6e54fc4f0ced?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80");
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: white;
+  padding: 3%;
+  width: 100%;
+  /* Each panel takes up half the container */
+  height: 100%;
+  /* Used for demo purposes */
+  float: left;
+  /* Makes sure panels are side-by-side */
   position: relative;
-  animation: animacuadrado 5s infinite;
-  margin: 3%;
-  grid-column: 1/4;
-  grid-row: 2/3;
+  /* Needed to define the z-index */
+  z-index: 2;
+  /* Places the panels in front of the prize */
+  transition: all 1s ease-out;
+  /* Animates the sliding transition */
+  grid-column: 1/7;
+  grid-row: 1/4;
 }
 
 .extra2 {
@@ -401,15 +423,15 @@ aside h3 {
   padding: 20px;
   background: #022C67;
   position: relative;
-  animation: animacuadrado 1s ease-in 2s infinite alternate;
+  animation: animacuadrado3 1s ease-in 2s infinite alternate;
   grid-column: 5/9;
   grid-row: 2/3;
 }
 
 .extra4 {
   margin: 20%;
-  width: 100px;
-  height: 100px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   background-color: #171e31;
   animation: bounce 0.5s;
