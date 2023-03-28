@@ -1,0 +1,23 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand:wght@600&display=swap');
+
+//VARIABLES
+$body-font: "Quicksand", 
+sans-serif;
+$title-font: "Abril Fatface", 
+cursive;
+
+//COLORS
+$light-pink: #EBCBD9;
+$purple: #A24F91;
+
+// ANIMATIONS
+@keyframes slidedown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

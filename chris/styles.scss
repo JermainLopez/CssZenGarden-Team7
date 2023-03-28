@@ -1,0 +1,70 @@
+@import './variables.scss';
+.intro{
+    width: 100%;
+    padding: 1.5em;
+    header{
+        margin-left: 0px;
+        font-family: $title-font;
+        writing-mode: vertical-lr;
+        h1{
+            font-size: 3em;
+            line-height: 40px;
+            letter-spacing: -20px;
+            color: white;
+            text-orientation: upright;
+            background: $purple; 
+            padding: 8px 8px 26px 8px;
+            border-radius: 5px;
+            animation: slidedown 3s;
+        }
+        h2{
+            font-size: 2.5em;
+            animation: slidedown 3s;
+        }
+        &:before {
+            content: "• • •";
+            font-size: 100px;
+        }
+    }
+    .summary{
+        font-family: $body-font;
+        font-size: 1.75em;
+        &:before {
+            content: "• • • • "; 
+            width: 180px;
+            height: 800px;
+            line-height: 356px;
+            font-size: 25em;
+            position: absolute;
+            color: $light-pink;
+            display: flex;
+            z-index: -1;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            background: $purple;
+            border-radius: 5px;
+            font-size: .75em;
+            padding: 4px;
+            transition: background-color 1s ease-out;
+        }
+        a:hover {
+            background-color: #003F8D;
+        }
+    }
+    .preamble{
+        font-size: 1.5em;
+        font-family: $body-font;
+        h3{
+            font-family: $title-font;
+            font-size: 1.75em;
+            writing-mode: vertical-lr;
+            position: absolute;
+            left: 261px;
+            height: 530px;
+            margin-top: 10px;
+            animation: slidedown 3s;
+        }
+    }
+}
