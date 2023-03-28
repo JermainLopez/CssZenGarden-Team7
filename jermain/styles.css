@@ -644,6 +644,11 @@ aside h3 {
     grid-row: 2/3;
   }
 
+  div.extra1::after {
+    content: "Some animations";
+    writing-mode: horizontal-tb;
+  }
+
   .extra2 {
     grid-column: 1/13;
     grid-row: 3/4;
