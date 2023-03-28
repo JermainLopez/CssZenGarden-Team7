@@ -28,6 +28,48 @@ body {
     @include container;
     @include pading-for-container;
     @include container-grid;
+    @include animation-of-title;
+    p {
+        @include text-paragraph;
+    }
+    h3 {
+        @include text-title;
+    }
+    .explanation {
+        padding-left: 10%;
+        @include pading-for-container;
+        @include image-background1;
+        grid-column: 1/10;
+        grid-row: 1/2;
+    }
+    .participation {
+        @include pading-for-container;
+        @include image-background2;
+        grid-column: 3/13;
+        grid-row: 2/3;
+        a {
+            color: yellow;
+        }
+    }
+    .benefits {
+        @include pading-for-container;
+        @include image-background3;
+        grid-column: 1/10;
+        grid-row: 3/4;
+    }
+    .requirements {
+        @include pading-for-container;
+        @include image-background4;
+        grid-column: 3/13;
+        grid-row: 4/5;
+        a {
+            color: yellow;
+            font-weight: bold;
+        }
+    }
+    abbr {
+        @include abbr-style;
+    }
 }
 
 .sidebar {
@@ -40,50 +82,6 @@ body {
     @include container-before;
 }
 
-.main p {
-    @include text-paragraph;
-}
-
-.main h3 {
-    @include text-title
-}
-
-.main .explanation {
-    padding-left: 10%;
-    @include pading-for-container;
-    @include image-background;
-    grid-column: 1/10;
-    grid-row: 1/2;
-}
-
-.main .participation {
-    @include pading-for-container;
-    @include image-background2;
-    grid-column: 3/13;
-    grid-row: 2/3;
-}
-
-.main .benefits {
-    @include pading-for-container;
-    @include image-background3;
-    grid-column: 1/10;
-    grid-row: 3/4;
-}
-
-.main .requirements {
-    @include pading-for-container;
-    @include image-background4;
-    grid-column: 3/13;
-    grid-row: 4/5;
-}
-
-
-/* ---------------------ANIMATIONS-------------------*/
-
-.main {
-    @include animation-of-title;
-}
-
 
 /* ---------------------FOOTER-----------------------*/
 
@@ -93,15 +91,14 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-
-footer a {
-    @include footer;
-}
-
-footer a:hover {
-    background: rgb(146, 123, 226);
-    color: $text-color;
+    a {
+        @include footer;
+    }
+    a:hover {
+        background: rgb(146, 123, 226);
+        color: $text-color;
+        font-weight: bold;
+    }
 }
 
 
@@ -134,12 +131,12 @@ aside {
 }
 
 
-/*ANIMATIONs*/
+/* ---------------------ANIMATIONS-------------------*/
 
 .extra1 {
     @include extra-square;
-    grid-column: 1/4;
-    grid-row: 2/3;
+    grid-column: 1/7;
+    grid-row: 1/2;
 }
 
 .extra2 {
@@ -181,4 +178,8 @@ aside {
 
 @media (max-width:650px) {
     @include small-main;
+}
+
+@media (max-width: 1500px) {
+    @include medium-main;
 }
